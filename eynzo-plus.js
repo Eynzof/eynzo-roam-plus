@@ -73,14 +73,6 @@
           window.ReferencesGroup['observer'] = new MutationObserver(callBack);
           window.ReferencesGroup['observer'].observe(targetNode, mutationConfig);
         }
-      const callBack = (mutationsList, observer) => {
-          for(let mutation of mutationsList) {
-              if (mutation.type === 'childList') {
-                  referenceList = getReference();
-                  filterNotMatch(referenceList[0], window.ReferencesGroup['State'])
-              }
-          }
-      }
       
       window.ReferencesGroup = {};
       window.ReferencesGroup['State'] = '';
