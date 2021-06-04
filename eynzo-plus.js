@@ -9,7 +9,7 @@
         popoverWrapper.appendChild(popoverTarget);
         // 第三层<span class="bp3-button bp3-minimal bp3-small">
         const popoverButton = document.createElement("span");
-        popoverButton.className = "bp3-button bp3-minimal bp3-small";
+        popoverButton.className = "bp3-button bp3-minimal bp3-small
         popoverButton.tabIndex = 0;
         // 第四层-图标 <span class="bp3-icon bp3-icon-layers">
         const popoverIcon = document.createElement("span");
