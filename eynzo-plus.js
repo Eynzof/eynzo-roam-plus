@@ -2,7 +2,7 @@
     const createButton = () => {
         // 第一层<span class="bp3-popover-wrapper group-reference-popover-wrapper">
         const popoverWrapper = document.createElement("span");
-        popoverWrapper.className = `ec-plus bp3-popover-wrapper`;
+        popoverWrapper.className = "ec-plus bp3-popover-wrapper";
         // 第二层<span class="bp3-popover-target">
         const popoverTarget = document.createElement("span");
         popoverTarget.className = "bp3-popover-target";
@@ -19,7 +19,6 @@
       
         // 事件处理
         popoverButton.onclick = (e) => {
-          console.log("test");
           window.roamAlphaAPI.createBlock({"location": 
           {"parent-uid": getTodayUid(), 
            "order": 0}, 
@@ -32,7 +31,10 @@
       
       const getCurrentPageTitle = () => {
           let pageUID = window.location.href.split('/')[7];
-          let pageTitle = window.roamAlphaAPI.q(`[:find ?title :where [?p :block/uid "${pageUID}"] [?b :block/page ?p] [?p :node/title ?title]]`)[0][0];
+          let pageTitle = window.roamAlphaAPI.q(`[:find ?title
+            :where [?p :block/uid "${pageUID}"]
+           [?p :node/title ?title]
+                   ]`)[0][0];
           return pageTitle;
       }
       
@@ -73,6 +75,8 @@
           window.ReferencesGroup['observer'] = new MutationObserver(callBack);
           window.ReferencesGroup['observer'].observe(targetNode, mutationConfig);
         }
+      const callBack = (mutationsList, observer) => {
+      }
       
       window.ReferencesGroup = {};
       window.ReferencesGroup['State'] = '';
