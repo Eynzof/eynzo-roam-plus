@@ -31,10 +31,7 @@
       
       const getCurrentPageTitle = () => {
           let pageUID = window.location.href.split('/')[7];
-          let pageTitle = window.roamAlphaAPI.q(`[:find ?title
-            :where [?p :block/uid "${pageUID}"]
-           [?p :node/title ?title]
-                   ]`)[0][0];
+          let pageTitle = window.roamAlphaAPI.q(`[:find ?title :where [?p :block/uid "${pageUID}"] [?p :node/title ?title]]`)[0][0];
           return pageTitle;
       }
       
