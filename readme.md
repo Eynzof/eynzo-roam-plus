@@ -1,7 +1,8 @@
-#Eynzo Roam Plus
+# Eynzo Roam Plus
 A tiny Roam Research plugin.
 
 ## Usage
+#### Install
 Put codes below into roam/css page as a code block and indent it under `{{[[roam/js]]}}`.
 
 ```
@@ -13,4 +14,4 @@ s.type = "text/javascript";
 document.getElementsByTagName("head")[0].appendChild(s);```
 ```
 
-## Effect
+## Demo
