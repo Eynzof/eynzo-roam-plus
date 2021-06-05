@@ -23,7 +23,7 @@
           {"parent-uid": getTodayUid(), 
            "order": 0}, 
        "block": 
-          {"string": "[[" + getCurrentPageTitle() + "]]"}});
+          {"string": "[[" + getCurrentPageTitle() + "]] ➜ subtitle"}});
         };
       
         return popoverWrapper;
