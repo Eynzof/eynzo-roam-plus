@@ -23,7 +23,7 @@
           {"parent-uid": getTodayUid(), 
            "order": 0}, 
        "block": 
-          {"string": "[[" + getCurrentPageTitle() + "]] ➜ subtitle"}});
+          {"string": "Card Title #[[" + getCurrentPageTitle() + "]]"}});
         };
       
         return popoverWrapper;
